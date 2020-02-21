@@ -25,7 +25,7 @@ final public class PopMenuAppearance: NSObject {
     public var popMenuBackgroundStyle: PopMenuBackgroundStyle = .dimmed(color: .black, opacity: 0.4)
     
     /// The font for labels.
-    public var popMenuFont: UIFont = UIFont.systemFont(ofSize: 16, weight: .semibold)
+    public var popMenuFont: UIFont = UIFont.systemFont(ofSize: 17, weight: .semibold)
     
     /// Corner radius for rounded corners.
     public var popMenuCornerRadius: CGFloat = 24
