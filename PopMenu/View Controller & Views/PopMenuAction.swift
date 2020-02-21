@@ -145,6 +145,7 @@ public class PopMenuDefaultAction: NSObject, PopMenuAction {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = image?.withRenderingMode(imageRenderingMode)
+        imageView.contentMode = .scaleAspectFit
         
         return imageView
     }()

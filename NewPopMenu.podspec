@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.module_name = "PopMenu"
   spec.platform = :ios, "9.0"
   spec.ios.deployment_target = "9.0"
-  spec.swift_version = '4.2'
+  spec.swift_version = '5.0'
   spec.requires_arc = true
   spec.frameworks  = "UIKit"
   spec.documentation_url = "https://calicastle.github.io/PopMenu"
