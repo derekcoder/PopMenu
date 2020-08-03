@@ -348,9 +348,12 @@ extension PopMenuViewController {
     /// - Returns: The source origin point
     fileprivate func calculateContentOrigin(with size: CGSize) -> CGPoint {
         guard let sourceFrame = absoluteSourceFrame else { return CGPoint(x: view.center.x - size.width / 2, y: view.center.y - size.height / 2) }
-        let minContentPos: CGFloat = UIScreen.main.bounds.size.width * 0.05
-        let maxContentPos: CGFloat = UIScreen.main.bounds.size.width * 0.95
-        
+		let keyWindow = UIApplication.shared.windows.first(where: { $0.isKeyWindow })
+		let screenSize = keyWindow?.frame.size ?? UIScreen.main.bounds.size
+
+        let minContentPos: CGFloat = screenSize.width * 0.05
+        let maxContentPos: CGFloat = screenSize.width * 0.95
+
         // Get desired content origin point
         let offsetX = (size.width - sourceFrame.size.width ) / 2
         var desiredOrigin = CGPoint(x: sourceFrame.origin.x - offsetX, y: sourceFrame.origin.y)
